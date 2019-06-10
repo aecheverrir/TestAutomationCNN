@@ -17,8 +17,8 @@ namespace CNNTest
         [TestInitialize]
         public void TestInitialize()
         {
-            // Initialize browser, obtain driver at: http://chromedriver.chromium.org/downloads
-            driver = new ChromeDriver(@"../../../../webdrivers/macOS/version74");
+            // Initialize browser, obtain drivers at: http://chromedriver.chromium.org/downloads
+            driver = new ChromeDriver(@"../../../../webdrivers/windows/version75");
             homepage = new HomePage(driver);
             searchPage = new SearchPage(driver);
         }
