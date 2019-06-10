@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNNTest", "CNNTest.csproj", "{B5A67D1D-68A4-4012-AF33-B5EBE9F385C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNNTest", "CNNTest\CNNTest.csproj", "{B5A67D1D-68A4-4012-AF33-B5EBE9F385C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNNPage", "CNNPage\CNNPage.csproj", "{D8C99D9A-B38D-40FB-8B23-B4F9DB9037B7}"
 EndProject
