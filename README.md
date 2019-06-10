@@ -1,10 +1,10 @@
 # Test Automation for CNN
 
-**Implementation time: 8hrs**
-<br/><br/>
-**Languages: JavaScript & C#**
-<br/><br/>
-**Framework: .NET Core 2.2 with Selenium**
+Implementation time: 8hrs
+
+Languages: JavaScript & C#
+
+Framework: .NET Core 2.2 with Selenium
 
 ## Table of Contents
 
