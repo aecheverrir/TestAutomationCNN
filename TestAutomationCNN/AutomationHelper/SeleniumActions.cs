@@ -3,16 +3,26 @@ using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using System;
 
-
 namespace AutomationHelper
 {
     public static class SeleniumActions
     {
-        public static void GoToPage(IWebDriver driver, string url)
+        public static IWebElement FindElement(IWebDriver driver, By byStatement)
         {
-            driver.Navigate().GoToUrl(url);
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            wait.Until(ExpectedConditions.UrlContains(url));
+            return wait.Until(ExpectedConditions.ElementExists(byStatement));
+        }
+
+        public static IWebElement FindElement(IWebDriver driver, IWebElement element, By byStatement)
+        {
+            try
+            {
+                return element.FindElement(byStatement);
+            }
+            catch
+            {
+                throw new NoSuchElementException(message: "Element not found");
+            }
         }
     }
 }

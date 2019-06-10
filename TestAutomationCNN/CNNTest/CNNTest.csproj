@@ -16,4 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CNNPage\CNNPage.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="webdrivers\chromedriver.exe" />
+  </ItemGroup>
 </Project>

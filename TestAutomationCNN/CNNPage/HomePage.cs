@@ -2,7 +2,7 @@
 using AutomationHelper;
 using OpenQA.Selenium;
 
-namespace CNNPage
+namespace CNNPages
 {
     public class HomePage
     {
@@ -14,11 +14,11 @@ namespace CNNPage
         {
             get
             {
-                return SeleniumActions.FindElement;
+                return SeleniumActions.FindElement(driver, By.Id(searchButtonID));
             }
             set
             {
-                this.name = value;
+                searchButton = value;
             }
         }
 
@@ -27,11 +27,24 @@ namespace CNNPage
         {
             get
             {
-                return SeleniumActions.FindElement;
+                return SeleniumActions.FindElement(driver, By.Id(searchInputFieldID));
             }
             set
             {
-                this.name = value;
+                searchInputField = value;
+            }
+        }
+
+        private string submitButtonID = "submit-button";
+        private IWebElement submitButton
+        {
+            get
+            {
+                return SeleniumActions.FindElement(driver, By.Id(submitButtonID));
+            }
+            set
+            {
+                submitButton = value;
             }
         }
 
@@ -43,12 +56,17 @@ namespace CNNPage
 
         public void GoToPage()
         {
-            SeleniumActions.GoToPage(driver, baseUrl);
+            JSActions.GoToPage(driver, baseUrl);
         }
 
         public void ClickSearchButton()
         {
             JSActions.Click(driver, searchButton);
+        }
+
+        public void ClickSubmitButton()
+        {
+            JSActions.Click(driver, submitButton);
         }
 
         public void TypeSearchInputField(string text)
