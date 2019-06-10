@@ -12,29 +12,32 @@ namespace CNNTest
         IWebDriver driver;
         HomePage homepage;
 
-
-        [ClassInitialize]
-        public void ClassInitialize()
-        {
-        }
         [TestInitialize]
         public void TestInitialize()
         {
-            // Initialize browser
-            driver = new ChromeDriver();
+            // Initialize browser, obtain driver at: http://chromedriver.chromium.org/downloads
+            driver = new ChromeDriver(@"../../../webdrivers");
             homepage = new HomePage(driver);
+        }
+
+        [TestCleanup]
+        public void TestCleanup()
+        {
+            // Finalize Driver
+            driver.Close();
+            driver = null;
         }
 
         [TestMethod]
         public void SearchNFL()
         {
-            Assert.IsTrue(true);
+            homepage.GoToPage();
         }
 
         [TestMethod]
         public void SearchNFLFake()
         {
-            Assert.IsTrue(true);
+
         }
     }
 }

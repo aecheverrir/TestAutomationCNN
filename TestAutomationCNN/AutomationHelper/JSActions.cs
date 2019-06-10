@@ -4,7 +4,8 @@ using OpenQA.Selenium;
 
 namespace AutomationHelper
 {
-    public class JSActions
+    public static class JSActions
     {
+
     }
 }
