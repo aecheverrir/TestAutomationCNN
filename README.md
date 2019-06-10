@@ -21,8 +21,8 @@
 
 ## Installation
 
-- Clone or download this repository
-- Search for the TestAutomationCNN.sln file (at the main folder, "TestAutomationCNN") and open it with VisualStudio
+- Clone or download this repository.
+- Search for the TestAutomationCNN.sln file (at the main folder, "TestAutomationCNN") and open it with VisualStudio.
 
 
 ## Setup
@@ -30,14 +30,14 @@
 Testing requires a web driver, which depends on your chrome version and operating system.
 Configure the web driver path: 
 - On Visual Studio, head to the SearchTesting.cs file and open it.
-- Change the `chromeDriverPath` constant value to target your operating system and chrome version (versions 73-76 are allready included in the project for both windows and macOS)
+- Change the `chromeDriverPath` constant value to target your operating system and chrome version (versions 73-76 are already included in the project for both windows and macOS).
  
  
 **If your operating system + chrome version is not included:**
 - Download the driver at: http://chromedriver.chromium.org/downloads
-- Extract it
-- Add the chromedriver.exe at an appropriate location within the "webdrivers" folder
-- Change the path to that relative path
+- Extract it.
+- Add the chromedriver.exe to the project at an appropriate location within the "webdrivers" folder.
+- Change `chromeDriverPath` constant value to meet the relative path of the chrome driver added in the previous step.
 
 
 ## Testing
