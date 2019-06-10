@@ -8,7 +8,7 @@ using System.Threading;
 namespace CNNTest
 {
     [TestClass]
-    public class HomePageTesting
+    public class SearchTesting
     {
         IWebDriver driver;
         HomePage homepage;
@@ -38,7 +38,6 @@ namespace CNNTest
             homepage.ClickSearchButton();
             homepage.TypeSearchInputField("NFL");
             homepage.ClickSubmitButton();
-            Thread.Sleep(5000);
             string result = searchPage.GetSearchResultsCountText();
             Assert.IsTrue(result.Contains("Displaying results"));
         }
@@ -50,7 +49,6 @@ namespace CNNTest
             homepage.ClickSearchButton();
             homepage.TypeSearchInputField("NFLFAKE");
             homepage.ClickSubmitButton();
-            Thread.Sleep(5000);
             string result = searchPage.GetSearchNoResultsText();
             Assert.IsTrue(result.Contains("did not match"));
         }

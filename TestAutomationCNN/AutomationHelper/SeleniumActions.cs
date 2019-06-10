@@ -9,7 +9,7 @@ namespace AutomationHelper
     {
         public static IWebElement FindElement(IWebDriver driver, By byStatement)
         {
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
             return wait.Until(ExpectedConditions.ElementExists(byStatement));
         }
 
